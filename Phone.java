@@ -1,6 +1,11 @@
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.Map;
+//Задание
+//Реализуйте структуру телефонной книги с помощью HashMap.
+//Программа также должна учитывать, что во входной структуре будут повторяющиеся имена с разными 
+//телефонами, их необходимо считать, как одного человека с разными телефонами. 
+//Вывод должен быть отсортирован по убыванию числа телефонов.
 public class Phone{
     // Метод, который добавляет номера в книгу
     public static void addNumber(String key, int value, Map<String, ArrayList<Integer>> map){
@@ -19,7 +24,7 @@ public class Phone{
             for(int el: item.getValue()){
                 phones = phones + el + ", ";
             }
-            System.out.printf("%s: %s \\n", item.getKey(), phones);
+            System.out.printf("%s: %s \n", item.getKey(), phones);
         }
     }
     public static void main(String[] args) {
